@@ -136,4 +136,8 @@ export default {
 }
 </script>
 <style scoped>
+.container {
+  position: fixed;
+  right: -500px;
+}
 </style>

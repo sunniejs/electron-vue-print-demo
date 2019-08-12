@@ -2,30 +2,21 @@ import * as path from 'path'
 import { app, protocol, BrowserWindow, ipcMain } from 'electron'
 import { createProtocol, installVueDevtools } from 'vue-cli-plugin-electron-builder/lib'
 import ElectronStore from 'electron-store'
-import electronLog from 'electron-log'
-import dayjs from 'dayjs'
+// ElectronStore 默认数据
 import electronDefaultData from './config/electron-default-data'
+// 设置菜单
 import { setMenu } from './main-process/menu'
-import { onCrash } from './main-process/crash'
+// 设置托盘
 import { setTray } from './main-process/tray'
+// 获取所有  ipcMain事件
 import ipcMainEvent from './main-process/event'
 const isDevelopment = process.env.NODE_ENV !== 'production'
 let tray = null
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
-
-// 日志配置
-electronLog.transports.console.level = false
-electronLog.transports.file.level = 'error'
-electronLog.transports.file.format = '{h}:{i}:{s}:{ms} {level} {text}'
-electronLog.transports.file.maxSize = 5 * 1024 * 1024
-electronLog.transports.file.file = path.join(app.getPath('logs'), `${dayjs().format('YYYY-MM-DD')}.log`)
 // 窗口映射对象
 global.$winodws = {
-  main: null,
-  login: null,
-  check: null,
-  service: null
+  main: null
 }
 
 const winodws = global.$winodws
@@ -99,7 +90,6 @@ app.on('ready', async() => {
     cwd: app.getPath('userData')
   })
   global.electronStore = electronStore
-  global.electronLog = electronLog
   createWindow()
 })
 

@@ -28,7 +28,6 @@
   <script>
     const { ipcRenderer } = require('electron')
     ipcRenderer.on('webview-print-render', (event, info) => {
-      console.log(info)
       // 执行渲染
       document.getElementById('bd').innerHTML = info.html
       ipcRenderer.sendToHost('webview-print-do')
