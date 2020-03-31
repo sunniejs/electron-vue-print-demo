@@ -7,7 +7,7 @@ electron+vuecli3 实现设置打印机，静默打印小票功能
 ## 使用
 
 ```
-git clone https://github.com/sunnie1992/electron-vue-print-demo.git
+git clone https://github.com/sunniejs/electron-vue-print-demo.git
 
 npm install
 
@@ -34,7 +34,7 @@ npm  run electron:serve
 
 有什么问题可以提 issue 或扫描微信二维码跟我联系，项目持续优化，加群获取最新更新消息
 
-[提 issue](https://github.com/sunnie1992/electron-vue-print-demo/issues/new)
+[提 issue](https://github.com/sunniejs/electron-vue-print-demo/issues/new)
 
 ## 关于我
 
