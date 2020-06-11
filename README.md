@@ -41,7 +41,7 @@ npm  run electron:serve
 您可以扫描添加下方的微信并备注 Sol 加交流群，给我提意见，交流学习。
 
 <p>
-  <img src="https://tweapp.top1buyer.com/mine.jpg" width="256" style="display:inline;">
+  <img src="http://imgs.sunniejs.cn/common/me.png" width="256" style="display:inline;">
 </p>
  
 如果对你有帮助送我一颗小星星（づ￣3￣）づ╭❤～
